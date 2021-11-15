@@ -1,0 +1,12 @@
+
+State Machine - |cpu8bit|CU:run_inst|currenstate
+Name currenstate.none currenstate.jumpZ currenstate.jumpS currenstate.loadstate currenstate.storestate currenstate.calstate currenstate.selectstate currenstate.romstate currenstate.idle 
+currenstate.idle 0 0 0 0 0 0 0 0 0 
+currenstate.romstate 0 0 0 0 0 0 0 1 1 
+currenstate.selectstate 0 0 0 0 0 0 1 0 1 
+currenstate.calstate 0 0 0 0 0 1 0 0 1 
+currenstate.storestate 0 0 0 0 1 0 0 0 1 
+currenstate.loadstate 0 0 0 1 0 0 0 0 1 
+currenstate.jumpS 0 0 1 0 0 0 0 0 1 
+currenstate.jumpZ 0 1 0 0 0 0 0 0 1 
+currenstate.none 1 0 0 0 0 0 0 0 1 

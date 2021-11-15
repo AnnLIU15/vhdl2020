@@ -1,0 +1,20 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_arith.ALL;
+USE ieee.std_logic_unsigned.ALL;
+ENTITY digitron_2 IS
+	PORT (
+		datain : IN STD_LOGIC_VECTOR(7 DOWNTO 0); -- 数据输入
+		digit1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);-- 低位输出
+		digit2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0) -- 高位输出
+	);
+END ENTITY;
+
+ARCHITECTURE bev OF digitron_2 IS
+	-- 0~F
+	TYPE NUM_DISP IS ARRAY (0 TO 15) OF STD_LOGIC_VECTOR(6 DOWNTO 0);
+	CONSTANT SEG7 : NUM_DISP := ("1000000", "1111001", "0100100", "0110000", "0011001", "0010010", "0000010", "1111000", "0000000", "0010000", "0001000", "0000011", "1000110", "0100001", "0000110", "0001110");
+BEGIN
+	digit1 <= SEG7(CONV_INTEGER(datain(3 DOWNTO 0)));	-- 低位译码
+	digit2 <= SEG7(CONV_INTEGER(datain(7 DOWNTO 4)));	-- 高位译码
+END ARCHITECTURE;

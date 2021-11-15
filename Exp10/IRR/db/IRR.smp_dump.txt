@@ -1,0 +1,6 @@
+
+State Machine - |IRR|CurrentState
+Name CurrentState.loadData CurrentState.Guidance CurrentState.IDLE 
+CurrentState.IDLE 0 0 0 
+CurrentState.Guidance 0 1 1 
+CurrentState.loadData 1 0 1 

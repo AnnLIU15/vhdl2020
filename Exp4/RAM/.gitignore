@@ -1,0 +1,8 @@
+!.gitignore
+output_files
+simulation
+incremental_db
+*.bak
+*.qws
+*.qsf
+*.qpf

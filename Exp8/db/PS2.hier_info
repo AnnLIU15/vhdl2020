@@ -1,0 +1,135 @@
+|PS2
+CLK => keybord:U1.CLK
+RST => keybord:U1.RST
+KBD_CLK => keybord:U1.KBD_CLK
+KBD_DATA => keybord:U1.KBD_DATA
+scan_ready <= keybord:U1.scan_ready
+MSD_SEG[0] <= DEC_7SEG:U2.Dataout[0]
+MSD_SEG[1] <= DEC_7SEG:U2.Dataout[1]
+MSD_SEG[2] <= DEC_7SEG:U2.Dataout[2]
+MSD_SEG[3] <= DEC_7SEG:U2.Dataout[3]
+MSD_SEG[4] <= DEC_7SEG:U2.Dataout[4]
+MSD_SEG[5] <= DEC_7SEG:U2.Dataout[5]
+MSD_SEG[6] <= DEC_7SEG:U2.Dataout[6]
+LSD_SEG[0] <= DEC_7SEG:U3.Dataout[0]
+LSD_SEG[1] <= DEC_7SEG:U3.Dataout[1]
+LSD_SEG[2] <= DEC_7SEG:U3.Dataout[2]
+LSD_SEG[3] <= DEC_7SEG:U3.Dataout[3]
+LSD_SEG[4] <= DEC_7SEG:U3.Dataout[4]
+LSD_SEG[5] <= DEC_7SEG:U3.Dataout[5]
+LSD_SEG[6] <= DEC_7SEG:U3.Dataout[6]
+
+
+|PS2|keybord:U1
+CLK => clk1.CLK
+RST => tmp_code[0].ACLR
+RST => tmp_code[1].ACLR
+RST => tmp_code[2].ACLR
+RST => tmp_code[3].ACLR
+RST => tmp_code[4].ACLR
+RST => tmp_code[5].ACLR
+RST => tmp_code[6].ACLR
+RST => tmp_code[7].ACLR
+RST => scan_ready~reg0.ACLR
+RST => st[0].ACLR
+RST => st[1].ACLR
+RST => st[2].ACLR
+RST => st[3].ACLR
+RST => t2.ACLR
+RST => t1.ACLR
+KBD_CLK => t1.DATAIN
+KBD_DATA => tmp_code.DATAB
+KBD_DATA => tmp_code.DATAB
+KBD_DATA => tmp_code.DATAB
+KBD_DATA => tmp_code.DATAB
+KBD_DATA => tmp_code.DATAB
+KBD_DATA => tmp_code.DATAB
+KBD_DATA => tmp_code.DATAB
+KBD_DATA => tmp_code.DATAB
+scan_ready <= scan_ready~reg0.DB_MAX_OUTPUT_PORT_TYPE
+scan_code[0] <= tmp_code[0].DB_MAX_OUTPUT_PORT_TYPE
+scan_code[1] <= tmp_code[1].DB_MAX_OUTPUT_PORT_TYPE
+scan_code[2] <= tmp_code[2].DB_MAX_OUTPUT_PORT_TYPE
+scan_code[3] <= tmp_code[3].DB_MAX_OUTPUT_PORT_TYPE
+scan_code[4] <= tmp_code[4].DB_MAX_OUTPUT_PORT_TYPE
+scan_code[5] <= tmp_code[5].DB_MAX_OUTPUT_PORT_TYPE
+scan_code[6] <= tmp_code[6].DB_MAX_OUTPUT_PORT_TYPE
+scan_code[7] <= tmp_code[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PS2|DEC_7SEG:U2
+Datain[0] => Mux0.IN19
+Datain[0] => Mux1.IN19
+Datain[0] => Mux2.IN19
+Datain[0] => Mux3.IN19
+Datain[0] => Mux4.IN19
+Datain[0] => Mux5.IN19
+Datain[0] => Mux6.IN19
+Datain[1] => Mux0.IN18
+Datain[1] => Mux1.IN18
+Datain[1] => Mux2.IN18
+Datain[1] => Mux3.IN18
+Datain[1] => Mux4.IN18
+Datain[1] => Mux5.IN18
+Datain[1] => Mux6.IN18
+Datain[2] => Mux0.IN17
+Datain[2] => Mux1.IN17
+Datain[2] => Mux2.IN17
+Datain[2] => Mux3.IN17
+Datain[2] => Mux4.IN17
+Datain[2] => Mux5.IN17
+Datain[2] => Mux6.IN17
+Datain[3] => Mux0.IN16
+Datain[3] => Mux1.IN16
+Datain[3] => Mux2.IN16
+Datain[3] => Mux3.IN16
+Datain[3] => Mux4.IN16
+Datain[3] => Mux5.IN16
+Datain[3] => Mux6.IN16
+Dataout[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+Dataout[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+Dataout[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+Dataout[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Dataout[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Dataout[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Dataout[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PS2|DEC_7SEG:U3
+Datain[0] => Mux0.IN19
+Datain[0] => Mux1.IN19
+Datain[0] => Mux2.IN19
+Datain[0] => Mux3.IN19
+Datain[0] => Mux4.IN19
+Datain[0] => Mux5.IN19
+Datain[0] => Mux6.IN19
+Datain[1] => Mux0.IN18
+Datain[1] => Mux1.IN18
+Datain[1] => Mux2.IN18
+Datain[1] => Mux3.IN18
+Datain[1] => Mux4.IN18
+Datain[1] => Mux5.IN18
+Datain[1] => Mux6.IN18
+Datain[2] => Mux0.IN17
+Datain[2] => Mux1.IN17
+Datain[2] => Mux2.IN17
+Datain[2] => Mux3.IN17
+Datain[2] => Mux4.IN17
+Datain[2] => Mux5.IN17
+Datain[2] => Mux6.IN17
+Datain[3] => Mux0.IN16
+Datain[3] => Mux1.IN16
+Datain[3] => Mux2.IN16
+Datain[3] => Mux3.IN16
+Datain[3] => Mux4.IN16
+Datain[3] => Mux5.IN16
+Datain[3] => Mux6.IN16
+Dataout[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+Dataout[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+Dataout[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+Dataout[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Dataout[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Dataout[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Dataout[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

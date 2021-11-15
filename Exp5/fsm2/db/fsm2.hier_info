@@ -1,0 +1,20 @@
+|fsm2
+clk => wseg.CLK
+clk => current_state~1.DATAIN
+w => wseg.DATAIN
+rst => current_state~3.DATAIN
+rst => next_state.s2_149.LATCH_ENABLE
+rst => next_state.s3_143.LATCH_ENABLE
+rst => next_state.s4_137.LATCH_ENABLE
+rst => next_state.s5_131.LATCH_ENABLE
+rst => next_state.s6_125.LATCH_ENABLE
+rst => next_state.s1_155.LATCH_ENABLE
+rst => next_state.s0_161.LATCH_ENABLE
+rst => z$latch.LATCH_ENABLE
+dispstate[0] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+dispstate[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+dispstate[2] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+dispstate[3] <= <GND>
+z <= z$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

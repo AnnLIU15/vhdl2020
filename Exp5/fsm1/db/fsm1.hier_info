@@ -1,0 +1,13 @@
+|fsm1
+clk => wordtmp.CLK
+clk => z~reg0.CLK
+clk => current_state~3.DATAIN
+w => wordtmp.DATAA
+w => process_0.IN1
+w => Selector0.IN0
+rst => current_state~5.DATAIN
+rst => wordtmp.ENA
+rst => z~reg0.ENA
+z <= z~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

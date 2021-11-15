@@ -1,0 +1,38 @@
+|Q38
+A[0] => Mux0.IN10
+A[0] => Mux1.IN10
+A[0] => Mux2.IN10
+A[0] => Mux3.IN10
+A[0] => Mux4.IN10
+A[0] => Mux5.IN10
+A[0] => Mux6.IN10
+A[0] => Mux7.IN10
+A[1] => Mux0.IN9
+A[1] => Mux1.IN9
+A[1] => Mux2.IN9
+A[1] => Mux3.IN9
+A[1] => Mux4.IN9
+A[1] => Mux5.IN9
+A[1] => Mux6.IN9
+A[1] => Mux7.IN9
+A[2] => Mux0.IN8
+A[2] => Mux1.IN8
+A[2] => Mux2.IN8
+A[2] => Mux3.IN8
+A[2] => Mux4.IN8
+A[2] => Mux5.IN8
+A[2] => Mux6.IN8
+A[2] => Mux7.IN8
+G1 => P1.IN0
+G2A => P1.IN1
+G2B => P1.IN1
+Y[0] << Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] << Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] << Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] << Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] << Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] << Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] << Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] << Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
