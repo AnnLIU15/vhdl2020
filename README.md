@@ -11,3 +11,20 @@ Code of vhdl in fall semester 2020
 
 Code of vhdl in fall semester 2021
 
+
+
+
+
+## format of .gitignore
+
+```.gitignore
+!.gitignore
+output_files
+simulation
+incremental_db
+*.bak
+*.qws
+*.qsf
+*.qpf
+```
+
