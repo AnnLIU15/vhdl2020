@@ -1,5 +1,4 @@
 # vhdl2020
-**open source(as LICENSE) when finish all projects** 
 
 Code of vhdl in fall semester 2020
 
